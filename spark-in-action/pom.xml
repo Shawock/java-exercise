@@ -14,7 +14,12 @@
     <dependencies>
         <dependency>
             <groupId>com.shawock</groupId>
-            <artifactId>action-starter</artifactId>
+            <artifactId>exercise-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
         </dependency>
     </dependencies>
 </project>
