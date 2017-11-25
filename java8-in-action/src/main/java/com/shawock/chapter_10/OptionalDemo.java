@@ -1,6 +1,6 @@
 package com.shawock.chapter_10;
 
-import com.shawock.Printer;
+import com.shawock.util.Printer;
 import lombok.Getter;
 
 import java.util.Optional;
@@ -47,10 +47,10 @@ public class OptionalDemo implements Printer {
 	 */
 	private static String getInsuranceName(Optional<Person> person) {
 		return person
-			.flatMap(Person::getCar)
-			.flatMap(Car::getInsurance)
-			.map(Insurance::getName)
-			.orElse("Unknown");
+				.flatMap(Person::getCar)
+				.flatMap(Car::getInsurance)
+				.map(Insurance::getName)
+				.orElse("Unknown");
 	}
 
 	/**
@@ -58,10 +58,10 @@ public class OptionalDemo implements Printer {
 	 */
 	private static String getNewInsuranceName(NewPerson person) {
 		return Optional.ofNullable(person)
-			.map(NewPerson::getCar)
-			.map(NewCar::getInsurance)
-			.map(NewInsurance::getName)
-			.orElse("Unknown");
+				.map(NewPerson::getCar)
+				.map(NewCar::getInsurance)
+				.map(NewInsurance::getName)
+				.orElse("Unknown");
 	}
 
 	/**
@@ -69,11 +69,11 @@ public class OptionalDemo implements Printer {
 	 */
 	private static String getNewInsuranceName(NewPerson person, int minAge) {
 		return Optional.ofNullable(person)
-			.filter(p -> p.getAge() >= minAge)
-			.map(NewPerson::getCar)
-			.map(NewCar::getInsurance)
-			.map(NewInsurance::getName)
-			.orElse("Unknown");
+				.filter(p -> p.getAge() >= minAge)
+				.map(NewPerson::getCar)
+				.map(NewCar::getInsurance)
+				.map(NewInsurance::getName)
+				.orElse("Unknown");
 	}
 
 	/**
@@ -81,9 +81,9 @@ public class OptionalDemo implements Printer {
 	 */
 	private static int readDuration(Properties properties, String name) {
 		return Optional.ofNullable(properties.getProperty(name))
-			.flatMap(OptionalDemo::string2IntNoThrow)
-			.filter(i -> i > 0)
-			.orElse(0);
+				.flatMap(OptionalDemo::string2IntNoThrow)
+				.filter(i -> i > 0)
+				.orElse(0);
 	}
 
 	private static Optional<Integer> string2IntNoThrow(String s) {

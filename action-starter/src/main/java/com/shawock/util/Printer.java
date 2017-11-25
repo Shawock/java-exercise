@@ -1,4 +1,4 @@
-package com.shawock;
+package com.shawock.util;
 
 /**
  * Created by Shawock on 2017/11/15.
