@@ -1,2 +1,10 @@
-# java-exercise
-java 各类书籍练习笔记
+# java-exercise-group
+
+A project to record daily exercises of learning java new techniques.
+
+| module | description |
+|:---------|:---------|
+| exercise-starter | provide common util to exercise |
+| java8-in-action | Java 8 |
+| spark-in-action | [spark web framework](http://sparkjava.com/) |
+
