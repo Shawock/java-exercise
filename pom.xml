@@ -7,6 +7,7 @@
         <module>exercise-starter</module>
         <module>java8-in-action</module>
         <module>spark-in-action</module>
+        <module>spring-in-action</module>
     </modules>
 
     <groupId>com.shawock</groupId>
@@ -46,6 +47,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>22.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
@@ -65,6 +72,12 @@
                 <groupId>com.sparkjava</groupId>
                 <artifactId>spark-core</artifactId>
                 <version>2.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>4.2.5.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

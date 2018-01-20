@@ -1,7 +1,9 @@
 package com.shawock.util;
 
 /**
- * Created by Shawock on 2017/11/15.
+ * Created on 2018/01/20.
+ *
+ * @author zhouhao
  */
 public interface Printer {
 	SysPrinter S = System.out::println;
