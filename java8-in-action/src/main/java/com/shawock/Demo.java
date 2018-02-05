@@ -20,6 +20,11 @@ public class Demo implements Printer {
     	private String name;
     }
 
+    @Data
+	private static class Animal {
+		private String nickname;
+	}
+
 	@Data
 	private static class Person {
 		private long id;
