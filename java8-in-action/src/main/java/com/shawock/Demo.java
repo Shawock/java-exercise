@@ -16,6 +16,11 @@ import java.util.Objects;
 public class Demo implements Printer {
 
 	@Data
+	private static class Human {
+    	private String name;
+    }
+
+	@Data
 	private static class Person {
 		private long id;
 		private String name;
