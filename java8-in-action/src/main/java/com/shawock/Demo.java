@@ -59,4 +59,8 @@ public class Demo implements Printer {
 		S.out(name.length());
 		return new Person();
 	}
+
+	private void test() {
+		S.out("hello merge");
+	}
 }
