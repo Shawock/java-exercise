@@ -73,4 +73,8 @@ public class Demo implements Printer {
 	private void test() {
 		S.out("hello merge");
 	}
+
+	private void test2() {
+    	S.out("hello merge");
+    }
 }
