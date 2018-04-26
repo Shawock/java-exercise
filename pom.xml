@@ -8,6 +8,7 @@
         <module>java8-in-action</module>
         <module>spark-in-action</module>
         <module>spring-in-action</module>
+        <module>soa-in-action</module>
     </modules>
 
     <groupId>com.shawock</groupId>
