@@ -9,6 +9,7 @@
         <module>spark-in-action</module>
         <module>spring-in-action</module>
         <module>soa-in-action</module>
+        <module>dp-in-action</module>
     </modules>
 
     <groupId>com.shawock</groupId>
