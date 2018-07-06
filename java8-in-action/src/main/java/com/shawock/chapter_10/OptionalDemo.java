@@ -1,48 +1,18 @@
 package com.shawock.chapter_10;
 
-import com.shawock.util.Printer;
 import lombok.Getter;
 
 import java.util.Optional;
 import java.util.Properties;
+
+import static com.shawock.util.PrintUtils.println;
 
 /**
  * Created on 2018/01/20.
  *
  * @author zhouhao
  */
-public class OptionalDemo implements Printer {
-	@Getter
-	private static class Person {
-		private Optional<Car> car;
-	}
-
-	@Getter
-	private static class Car {
-		private Optional<Insurance> insurance;
-	}
-
-	@Getter
-	private static class Insurance {
-		private String name;
-	}
-
-	@Getter
-	private static class NewPerson {
-		private int age;
-		private NewCar car;
-	}
-
-	@Getter
-	private static class NewCar {
-		private NewInsurance insurance;
-	}
-
-	@Getter
-	private static class NewInsurance {
-		private String name;
-	}
-
+public class OptionalDemo {
 	/**
 	 * Optional#map 是返回 Optional 包装过的对象，因此对于返回就是 Optional 的对象不能用 map 方法
 	 * Optional#flatMap 是将 Optional 对象打平的方法
@@ -97,9 +67,9 @@ public class OptionalDemo implements Printer {
 	}
 
 	public static void main(String[] args) {
-		S.out("1. ----------------");
-		S.out(getInsuranceName(Optional.empty()));
-		S.out(getNewInsuranceName(null));
+		println("1. ----------------");
+		println(getInsuranceName(Optional.empty()));
+		println(getNewInsuranceName(null));
 
 		Properties properties = new Properties();
 		properties.setProperty("aaa", "123");
@@ -107,11 +77,42 @@ public class OptionalDemo implements Printer {
 		properties.setProperty("ccc", "-3");
 		properties.setProperty("ddd", "");
 
-		S.out("2. ----------------");
-		S.out(readDuration(properties, "aaa"));
-		S.out(readDuration(properties, "bbb"));
-		S.out(readDuration(properties, "ccc"));
-		S.out(readDuration(properties, "ddd"));
-		S.out(readDuration(properties, "eee"));
+		println("2. ----------------");
+		println(readDuration(properties, "aaa"));
+		println(readDuration(properties, "bbb"));
+		println(readDuration(properties, "ccc"));
+		println(readDuration(properties, "ddd"));
+		println(readDuration(properties, "eee"));
+	}
+
+	@Getter
+	private static class Person {
+		private Optional<Car> car;
+	}
+
+	@Getter
+	private static class Car {
+		private Optional<Insurance> insurance;
+	}
+
+	@Getter
+	private static class Insurance {
+		private String name;
+	}
+
+	@Getter
+	private static class NewPerson {
+		private int age;
+		private NewCar car;
+	}
+
+	@Getter
+	private static class NewCar {
+		private NewInsurance insurance;
+	}
+
+	@Getter
+	private static class NewInsurance {
+		private String name;
 	}
 }

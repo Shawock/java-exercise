@@ -1,16 +1,16 @@
 package com.shawock.dp.factory;
 
-import com.shawock.util.Printer;
+import static com.shawock.util.PrintUtils.println;
 
 /**
  * Created on 2018/07/04.
  *
  * @author zhouhao
  */
-public class Square implements Shape, Printer {
+public class Square implements Shape {
 
 	@Override
 	public void draw() {
-		S.out("draw a Square success: ▢");
+		println("▢");
 	}
 }

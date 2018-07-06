@@ -1,15 +1,15 @@
 package com.shawock.dp.factory;
 
-import com.shawock.util.Printer;
+import static com.shawock.util.PrintUtils.println;
 
 /**
  * Created on 2018/07/04.
  *
  * @author zhouhao
  */
-public class Pentagon implements Shape, Printer {
+public class Pentagon implements Shape {
 	@Override
 	public void draw() {
-		S.out("draw a Pentagon success: ☆");
+		println("☆");
 	}
 }

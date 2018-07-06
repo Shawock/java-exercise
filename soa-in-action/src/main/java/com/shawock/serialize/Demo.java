@@ -1,6 +1,5 @@
 package com.shawock.serialize;
 
-import com.shawock.util.Printer;
 import lombok.Builder;
 import lombok.Data;
 import sun.misc.BASE64Encoder;
@@ -12,12 +11,14 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+import static com.shawock.util.PrintUtils.println;
+
 /**
  * Created on 2018/04/26.
  *
  * @author zhouhao
  */
-public class Demo implements Printer {
+public class Demo {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		// write object
@@ -32,10 +33,15 @@ public class Demo implements Printer {
 		byte[] bytes = bos.toByteArray();
 		ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
 		String base64 = byte2base64(bytes);
-		S.out(base64);
+		println(base64);
 		ObjectInputStream input = new ObjectInputStream(bis);
 		Person person = (Person) input.readObject();
-		S.out(person);
+		println(person);
+	}
+
+	private static String byte2base64(byte[] bytes) {
+		BASE64Encoder base64Encoder = new BASE64Encoder();
+		return base64Encoder.encode(bytes);
 	}
 
 	@Data
@@ -43,11 +49,6 @@ public class Demo implements Printer {
 	private static class Person implements Serializable {
 		private String name;
 		private int age;
-	}
-
-	private static String byte2base64(byte[] bytes) {
-		BASE64Encoder base64Encoder = new BASE64Encoder();
-		return base64Encoder.encode(bytes);
 	}
 }
 
