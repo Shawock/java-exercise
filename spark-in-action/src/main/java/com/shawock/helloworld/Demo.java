@@ -2,7 +2,7 @@ package com.shawock.helloworld;
 
 import spark.Spark;
 
-import static com.shawock.util.PrintUtils.println;
+import static com.shawock.util.SystemUtils.println;
 
 /**
  * Created on 2018/01/20.

@@ -5,7 +5,7 @@ import lombok.Getter;
 import java.util.Optional;
 import java.util.Properties;
 
-import static com.shawock.util.PrintUtils.println;
+import static com.shawock.util.SystemUtils.println;
 
 /**
  * Created on 2018/01/20.

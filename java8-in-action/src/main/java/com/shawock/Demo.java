@@ -7,7 +7,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
-import static com.shawock.util.PrintUtils.println;
+import static com.shawock.util.SystemUtils.println;
 
 /**
  * Created on 2018/01/20.

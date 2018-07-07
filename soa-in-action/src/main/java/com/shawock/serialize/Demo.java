@@ -11,7 +11,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-import static com.shawock.util.PrintUtils.println;
+import static com.shawock.util.SystemUtils.println;
 
 /**
  * Created on 2018/04/26.
